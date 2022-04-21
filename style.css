@@ -1,0 +1,172 @@
+*{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.35rem;
+}
+
+
+
+body{
+  
+    margin: 0px;
+    color:white;
+}
+
+
+.navi{
+
+height: 70px;
+display: flex;
+justify-content:space-between;
+}
+
+
+.headerlogo{
+    margin: 20px 50px;
+}
+
+
+.navilist li{
+   float: left;
+   margin-left: 30px;
+   list-style: none;
+   margin: 20px 50px;
+}
+
+@media(max-width:450px) {
+    
+        
+        .navilist li{
+           float: left;
+           margin: 5px 0px;
+           font-size: 10px;
+        }
+          
+}
+
+
+
+
+.headImage{
+    background-color: rgba(146,0,214, 0.3);
+    margin: 50px;
+    height:600px;
+    position: relative;
+   
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headImage h1{
+    font-size: 170px;
+    font-weight: normal;
+    padding-top: 50px; 
+}
+
+
+@media(max-width:450px) {
+    .headImage h1{
+        font-size: 110px;
+        font-weight: normal;
+        padding-top: 100px; 
+    }
+
+    .headImage{
+        background-color: rgba(146,0,214, 0.3);
+        margin: 30px;
+        height:700px;
+        position: relative;
+       
+    }
+    
+}
+
+
+.left{
+    position: absolute;
+    top:400px;
+    right:3px;
+    
+   
+}
+.headImage p{
+    letter-spacing: 0.2rem;
+    line-height: 30px;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.box{
+    height:130px;
+    padding: 30px;
+    position: absolute;
+    top:270px;
+    left:30px;
+}
+
+.box h2{
+    line-height: 50px;
+}
+
+.second{
+    height: 300px;
+    position: relative;
+}
+
+
+
+@media(max-width:450px) {
+
+.left{
+   
+   
+  font-size:10px;
+    position: absolute;
+    top: 500px;
+    left:10px;
+    text-align: center;
+    
+   
+}
+
+.box{
+    height:130px;
+    padding: 30px;
+    position: absolute;
+    top:330px;
+    left:60px;
+}
+
+.box h2{
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.second{
+    height: 300px;
+    position: relative;
+}
+
+}
+
+
+
+
+
+.fluffy {
+    animation: fluffy1 3s ease infinite;
+  }
+  
+  @keyframes fluffy1 {
+    0% { transform:translateY(0) }
+    5% { transform:translateY(0) }
+    10% { transform:translateY(0) }
+    20% { transform:translateY(-15px) }
+    25% { transform:translateY(0) }
+    30% { transform:translateY(-15px) }
+    50% { transform:translateY(0) }
+    100% { transform:translateY(0) }
+  }

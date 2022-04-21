@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*==================================================
+共通　横並びのための設定
+===================================*/
+
+.navilist{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+}
+
+.navilist li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.navilist li{
+    margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-9 テキストが入れ替わる
+===================================*/
+
+
+.navilist li a{
+    /*テキストの基点とするためrelativeを指定*/
+	position: relative;
+    /*はみ出る要素を隠す*/
+	overflow: hidden;
+	padding:10px 60px;
+}
+
+.navilist li span{
+    /*絶対配置でテキストの位置を決める*/
+	position: absolute;
+	left: 50%;
+	top:0;
+    /*アニメーションの指定*/
+	transition: all .5s;
+	transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+  /*ブロック要素にして透過なし、テキスト折り返しなし*/  
+	display: block;
+	opacity:1;
+	white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.navilist li span:nth-child(2){
+	opacity:0;/*透過0に*/
+    transform: translate(-50%,100%);/*X方向に-50% Y方向に100%*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.navilist li:hover span:nth-child(1){
+	opacity:0;/*透過0に*/
+    transform: translate(-50%,-100%);/*X方向に-50% Y方向に-100%*/
+}
+
+.navilist li:hover span:nth-child(2){
+	opacity:1;/*不透明に*/
+	transform: translate(-50%, 0);/*X方向に-50% Y方向に0*/
+}
+
+
+@media(max-width:450px) {
+	.navilist{
+		display: flex;
+		flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+		margin:0 0 10px 0;
+		
+	}
+	
+	.navilist li a{
+		display: flex;
+		flex-wrap: wrap;
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+	}
+	
+	.navilist li{
+		margin-bottom:2px;
+	}
+	
+	/*==================================================
+	　5-3-9 テキストが入れ替わる
+	===================================*/
+	
+	
+	.navilist li a{
+		/*テキストの基点とするためrelativeを指定*/
+		position: relative;
+		/*はみ出る要素を隠す*/
+		overflow: hidden;
+		padding:10px 60px;
+	}
+	
+	.navilist li span{
+		/*絶対配置でテキストの位置を決める*/
+		position: absolute;
+		left: 50%;
+		top:0;
+		/*アニメーションの指定*/
+		transition: all .5s;
+		transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+	  /*ブロック要素にして透過なし、テキスト折り返しなし*/  
+		display: block;
+		opacity:1;
+		white-space: nowrap;
+	}
+	
+	/*差し替わるテキストの設定*/
+	.navilist li span:nth-child(2){
+		opacity:0;/*透過0に*/
+		transform: translate(-50%,100%);/*X方向に-50% Y方向に100%*/
+	}
+	
+	/*hoverするとテキストが入れ替わる設定*/
+	.navilist li:hover span:nth-child(1){
+		opacity:0;/*透過0に*/
+		transform: translate(-50%,-100%);/*X方向に-50% Y方向に-100%*/
+	}
+	
+	.navilist li:hover span:nth-child(2){
+		opacity:1;/*不透明に*/
+		transform: translate(-50%, 0);/*X方向に-50% Y方向に0*/
+	}
+	
+	
+}

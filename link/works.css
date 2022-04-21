@@ -1,0 +1,153 @@
+
+
+@charset "utf-8";
+
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+.gallery{
+columns: 4;/*段組みの数*/
+padding:0 15px;/*ギャラリー左右に余白をつける*/
+}
+
+.gallery li {
+    margin-bottom: 20px;/*各画像下に余白をつける*/
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img{
+	width:100%;
+	height:auto;
+    border-radius: 10px;
+	vertical-align: bottom;/*画像の下にできる余白を削除*/}
+
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+	.gallery{
+	columns:3;
+	}	
+}
+
+@media only screen and (max-width: 768px) {
+	.gallery{
+	columns: 2;
+	}	
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #333;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+	font-size:6vw;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin:30px 0;
+    color:rgb(245, 223, 255);
+}
+
+p{
+	margin:0 10px 10px 10px;
+	word-wrap : break-word;
+}
+
+/*画像を出現させるアニメーションCSS*/
+
+.flipLeft{
+animation-name: flipLeft;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+perspective-origin: left center;
+opacity: 0;
+}
+
+@keyframes flipLeft{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+ 	opacity: 0;
+  }
+
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+body{
+    background: linear-gradient(rgb(36, 0, 53), rgb(19,20,20));
+   
+}
+
+.navi{
+
+    height: 70px;
+    display: flex;
+    justify-content:space-between;
+   
+    }
+    
+    
+    .headerlogo{
+        margin: 20px 50px;
+       color: rgb(255, 255, 255);
+    }
+    
+    
+    .navilist li{
+       float: left;
+       margin-left: 30px;
+       list-style: none;
+       margin: 20px 50px;
+      
+    }
+    
+
+
+    *{
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 0.35rem;
+    }
+    
+
+
+    @media(max-width:450px) {
+        h1{
+            text-align: center;
+            font-size:6vw;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin:30px 0;
+            color:rgb(245, 223, 255);
+            padding-top: 50px;
+        }
+        
+         
+        .navilist li{
+            float: left;
+            margin: 5px 0px;
+            font-size: 10px;
+         }
+           
+    }

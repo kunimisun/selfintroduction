@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*== 影がついて浮き上がる */
+
+/*ボタンの形状*/
+.float1{
+  
+    border: 3px solid rgb(200, 162, 183);
+    color: rgb(255, 255, 255);
+    padding:20px 30px;
+    display: inline-block;
+    text-decoration: none; 
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+/*hoverをしたらボックスに影がつく*/
+.float1:hover {
+  box-shadow: 0 7px 10px rgba(49, 7, 34, 0.5);
+  border: 2px solid rgba(200, 162, 183,0.1);
+  /* border-color: transparent; */
+}
+
+@media(max-width:450px) {
+    .float1{
+  
+        border: 2px solid rgb(200, 162, 183);
+        color: rgb(255, 255, 255);
+        padding:20px 30px;
+        display: inline-block;
+        text-decoration: none; 
+        outline: none;
+        /*アニメーションの指定*/
+        transition: all .3s;
+    } 
+    .float1:hover {
+        box-shadow: 0 7px 10px rgba(49, 7, 34, 0.5);
+        border: 1px solid rgba(200, 162, 183,0.1);
+        /* border-color: transparent; */
+      }
+}
+

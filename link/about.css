@@ -1,0 +1,155 @@
+*{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+
+body{
+    background-color: #8b6ea9;
+    color:white;
+}
+
+
+.navi{
+
+    height: 70px;
+    display: flex;
+    justify-content:space-between;
+    }
+    
+    
+    .headerlogo{
+        margin: 20px 50px;
+    }
+    
+    .navilist li{
+       float: left;
+       margin-left: 30px;
+       list-style: none;
+       margin: 20px 50px;
+    }
+    
+    
+
+h1{
+    padding-top: 100px;
+    text-align:center;
+    color: #fff;
+    padding-bottom: 50px;
+
+}
+
+
+
+h3{
+ 
+    padding-top: 50px;
+    text-align:left;
+    color: #fff;
+ 
+
+}
+
+
+
+.about{
+/* background-color: #e5c046; */
+    display: flex;
+    margin-bottom: 100px;
+   padding: 0px 200px;
+
+
+}
+
+
+.japanese{
+    /* margin: 0 auto; */
+    padding-left: 100px;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-size: 15px;
+    text-align: left;
+
+    /* display:inline; */
+    /* background-color:rgb(83, 3, 3); */
+
+}
+
+.english{
+     padding-left: 100px;
+     /* margin: 0 auto; */
+     color:#fff;
+     text-align: left;
+
+     letter-spacing: 0.2rem;
+
+    font-size: 15px;
+    /* display:inline; */
+    /* background-color: aquamarine; */
+
+}
+
+
+
+
+
+@media(max-width:450px) {
+    .navilist li{
+        float: left;
+        margin: 5px 0px;
+        font-size: 10px;
+     }
+       
+    h1{
+        padding-top: 80px;
+        font-size: 20px;
+        
+        padding-bottom: 50px;
+    
+    }
+    
+    
+    
+
+    
+    
+    .about{
+    /* background-color: #e5c046; */
+        display: flex;
+        margin-bottom: 10px;
+       padding: 0px;
+    
+    
+    }
+    
+    
+    .japanese{
+        /* margin: 0 auto; */
+        padding-left: 10px;
+        color: #fff;
+        letter-spacing:normal;
+        font-size: 2px;
+        text-align: left;
+    
+        /* display:inline; */
+        /* background-color:rgb(83, 3, 3); */
+    
+    }
+    
+    .english{
+         padding-left: 50px;
+         font-size: 2px;
+         /* margin: 0 auto; */
+         color:#fff;
+         text-align: left;
+    
+         letter-spacing:normal;
+        /* display:inline; */
+        /* background-color: aquamarine; */
+    
+    }
+    
+
+
+}
